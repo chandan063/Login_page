@@ -125,7 +125,7 @@ img{
 
 @media (max-width: 600px) {
     body{
-        background-image: url("assets/man-8106958_960_720.webp");
+        background-image: url("man-8106958_960_720.webp");
         color: white;
     }
     img{
