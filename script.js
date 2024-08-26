@@ -5,6 +5,7 @@ const loginContainer = document.getElementById("box");
 //   user data
 let correctUsername = " ";
 let correctPassword = " ";
+let username=" ";
 
 const btn = document.querySelector("button");
 btn.addEventListener("click", login);
@@ -17,9 +18,11 @@ function login() {
     text.value = "";
     pass.value = "";
     loginContainer.style.display = "none";
-    let newBox = document.createElement("p");
-    newBox.innerHTML = ` `;
+    let newBox = document.createElement("h1");
+    newBox.innerHTML = `Welcome ${username} <br> <img src="teddy-bear-8815423_1280.webp" alt="">`;
     loginContainer.after(newBox);
+
+
   } else {
     text.value = "";
     pass.value = "";
@@ -57,10 +60,10 @@ function page() {
     const confirmPassword = document.getElementById("confirm-password");
     const errormsg = document.getElementById("error-messag");
 
-    console.log(fullName.value);
-    console.log(email.value);
-    console.log(password.value);
-    console.log(confirmPassword.value);
+    // console.log(fullName.value);
+    // console.log(email.value);
+    // console.log(password.value);
+    // console.log(confirmPassword.value);
     
     if (fullName.value === "" ||
       email.value === "" ||
@@ -90,8 +93,9 @@ function page() {
       loginContainer.style.display = "block";
 
       correctUsername=email.value;
-      console.log(correctUsername)
+      // console.log(correctUsername)
       correctPassword=password.value;
+      username=fullName.value;
 
 // removing the uservalue
       fullName.value="";

@@ -9,7 +9,8 @@ body,html{
     align-items: center;
     
 }
-img{
+#wallpaper,img{
+    border-radius: 10%;
     width: 40vw;
     height: 80vh;
 }
@@ -126,10 +127,15 @@ img{
 @media (max-width: 600px) {
     body{
         background-image: url("man-8106958_960_720.webp");
-        color: white;
+        /* color: white; */
+    }
+    #wallpaper{
+        display: none;
     }
     img{
-        display: none;
+        border-radius: 50%;
+        width: 91vw;
+        height: 68vh;
     }
     .login-container {
         display: block;
